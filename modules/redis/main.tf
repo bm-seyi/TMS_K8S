@@ -12,7 +12,7 @@ resource "helm_release" "redis" {
     },
     {
       name  = "auth.password"
-      value = "myStrongRedisPassword"
+      value = var.password
     },
     {
       name  = "architecture"

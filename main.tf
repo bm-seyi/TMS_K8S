@@ -22,6 +22,7 @@ module "tms-signalr" {
 module "redis" {
   source    = "./modules/redis"
   namespace = kubernetes_namespace_v1.TMS.metadata[0].name
+  password  = var.redisPassword
 }
 
 module "kafka" {
