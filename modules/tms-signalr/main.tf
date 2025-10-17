@@ -1,6 +1,6 @@
 resource "kubernetes_deployment" "tms_signalr" {
   metadata {
-    name = "tms-signalr"
+    name      = "tms-signalr"
     namespace = var.namespace
     labels = {
       app = "tms-signalr"
