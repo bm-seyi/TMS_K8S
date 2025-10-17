@@ -2,7 +2,7 @@ resource "helm_release" "kafka" {
   name       = "kafka"
   repository = "https://charts.bitnami.com/bitnami"
   chart      = "kafka"
-  namespace  = "tms"
+  namespace  = var.namespace
   version    = "32.4.3"
 
   set = [
