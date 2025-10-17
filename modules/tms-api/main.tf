@@ -1,6 +1,7 @@
 resource "kubernetes_deployment" "tms_api" {
   metadata {
     name = "tms-api"
+    namespace = var.namespace
     labels = {
       app = "tms-api"
     }
